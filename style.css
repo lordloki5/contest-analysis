@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2c3e50; /* Dark blue-gray */
+  color: #ecf0f1; /* Light gray */
+  margin: 0;
+  width: 450px;
+}
+
+.tabs {
+  display: flex;
+  background-color: #34495e;
+}
+
+.tab-link {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #ecf0f1;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-link.active {
+  background-color: #2c3e50;
+  font-weight: 700;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.container {
+  padding: 0; /* Remove padding from the main container */
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #34495e; /* Slightly lighter dark blue-gray */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#timer {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #3498db; /* Bright blue */
+}
+
+.timer-controls button {
+  background-color: #3498db; /* Bright blue */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.timer-controls button:hover {
+  background-color: #2980b9; /* Darker blue */
+}
+
+.timer-controls button:disabled {
+  background-color: #95a5a6; /* Gray */
+  cursor: not-allowed;
+}
+
+h1 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ecf0f1;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#handleInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #34495e;
+  border-radius: 5px 0 0 5px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+#fetchButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#fetchButton:hover {
+  background-color: #2980b9;
+}
+
+#clearCacheButton {
+  background-color: #e74c3c; /* Red */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#clearCacheButton:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+.contest {
+  background-color: #34495e;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.virtual-contest-setup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#contest-select {
+  padding: 10px;
+  border: 1px solid #34495e;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#start-virtual-contest {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-virtual-contest:hover {
+  background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.problems {
+  display: flex;
+  justify-content: space-between;
+}
+
+.solved-during,
+.solved-after,
+.next-problems {
+  flex-basis: 30%;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+li a:hover {
+  color: #3498db;
+}
+
+.loader {
+  border: 4px solid #34495e;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #34495e;
+  border-radius: 5px;
+}

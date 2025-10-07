@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Contest Analysis",
+  "version": "1.0",
+  "description": "Analyzes your Codeforces contest performance.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://codeforces.com/api/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
